@@ -5,5 +5,5 @@ const port = process.env.PORT || 3000;
 app.use('/', require('./controllers'))
 
 app.listen(port, () => {
-    console.log(`Running on port ${port}`)
+    console.log(`Listening on port ${port}`)
 })
