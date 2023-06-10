@@ -1,23 +1,42 @@
-{
-  "contact": {
+[
+  {
+    "_id": "63ba1a9afdd54bc4ede40d2f",
+    "firstName": "Intan",
+    "lastName": "Tjoe",
+    "email": "bonTan87@gmail.com",
+    "favoriteColor": "Pink",
+    "birthday": "09/29/1987"
+  },
+  {
+    "_id": "63ba1a9afdd54bc4ede40d30",
+    "firstName": "Kaitlyn",
+    "lastName": "Tjoe",
+    "email": "Lyn10@gmail.com",
+    "favoriteColor": "Purple",
+    "birthday": "08/02/2015"
+  },
+  {
+    "_id": "63ba1a9afdd54bc4ede40d31",
+    "firstName": "Karl",
+    "lastName": "Tjoe",
+    "email": "KarlTjoe02@gmail.com",
+    "favoriteColor": "Blue",
+    "birthday": "04/16/2016"
+  },
+  {
+    "_id": "63ba1a9afdd54bc4ede40d2e",
     "firstName": "Teddy",
     "lastName": "Tjoe",
     "email": "jethe90@gmail.com",
     "favoriteColor": "Black",
-    "birthday": "01/20/90"
+    "birthday": "01/20/1990"
   },
-  "contact2": {
-    "firstName": "Permata",
-    "lastName": "Sari",
-    "email": "bonTan87@gmail.com",
-    "favoriteColor": "Pink",
-    "birthday": "09/29/87"
-  },
-  "contact3": {
-    "firstName": "Kaitlyn",
+  {
+    "_id": "63ba1a9afdd54bc4ede40d32",
+    "firstName": "Kimora",
     "lastName": "Tjoe",
-    "email": "Lyn10@gmail.com",
-    "favoriteColor": "Blue",
-    "birthday": "08/02/15"
+    "email": "KimTjoe8@gmail.com",
+    "favoriteColor": "Yellow",
+    "birthday": "02/23/2017"
   }
-}
+]
