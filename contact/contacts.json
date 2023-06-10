@@ -1,0 +1,37 @@
+{
+  "contact": {
+    "firstName": "Intan",
+    "lastName": "Tjoe",
+    "email": "bonTan87@gmail.com",
+    "favoriteColor": "Pink",
+    "birthday": "09/29/1987"
+  },
+  "contact2": {
+    "firstName": "Kaitlyn",
+    "lastName": "Tjoe",
+    "email": "Lyn10@gmail.com",
+    "favoriteColor": "Purple",
+    "birthday": "08/02/2015"
+  },
+  "contact3": {
+    "firstName": "Karl",
+    "lastName": "Tjoe",
+    "email": "KarlTjoe02@gmail.com",
+    "favoriteColor": "Blue",
+    "birthday": "04/16/2016"
+  },
+  "contact4": {
+    "firstName": "Teddy",
+    "lastName": "Tjoe",
+    "email": "jethe90@gmail.com",
+    "favoriteColor": "Black",
+    "birthday": "01/20/1990"
+  },
+  "contact5": {
+    "firstName": "Kimora",
+    "lastName": "Tjoe",
+    "email": "KimTjoe8@gmail.com",
+    "favoriteColor": "Yellow",
+    "birthday": "02/23/2017"
+  }
+}
