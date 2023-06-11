@@ -13,8 +13,8 @@ const getSingle = async (req, res, next) => {
   const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
-    .db('contacts')
-    .collection('contacts')
+    .db('CSE341')
+    .collection('Contacts')
     .find({ _id: userId });
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
