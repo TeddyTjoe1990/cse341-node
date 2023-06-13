@@ -1,24 +1,17 @@
-GET http://localhost:8080/contacts
-
+// LOCALHOST 
+### 
+GET http://localhost:8080/contacts 
+### 
 GET http://localhost:8080/contacts/63ba1a9afdd54bc4ede40d2f
 
+### 
 GET http://localhost:8080/contacts/63ba1a9afdd54bc4ede40d30
 
+### 
 GET http://localhost:8080/contacts/63ba1a9afdd54bc4ede40d31
 
+### 
 GET http://localhost:8080/contacts/63ba1a9afdd54bc4ede40d2e
 
+### 
 GET http://localhost:8080/contacts/63ba1a9afdd54bc4ede40d32
-
-GET https://cse-341-l02.onrender.com/contacts
-
-GET https://cse-341-l02.onrender.com/contacts/63ba1a9afdd54bc4ede40d2f
-
-GET https://cse-341-l02.onrender.com/contacts/63ba1a9afdd54bc4ede40d30
-
-GET https://cse-341-l02.onrender.com/contacts/63ba1a9afdd54bc4ede40d31
-
-GET https://cse-341-l02.onrender.com/contacts/63ba1a9afdd54bc4ede40d2e
-
-GET https://cse-341-l02.onrender.com/contacts/63ba1a9afdd54bc4ede40d32
-
