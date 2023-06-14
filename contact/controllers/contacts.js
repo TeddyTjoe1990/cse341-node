@@ -65,7 +65,7 @@ const deleteData = async (req, res) => {
     .getDb()
     .db('CSE341')
     .collection('Contacts')
-    .remove({ _id: userId }, true);
+    .deleteOne({ _id: userId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
     res.status(204).send();

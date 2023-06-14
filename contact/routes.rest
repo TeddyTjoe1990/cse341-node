@@ -15,3 +15,65 @@ GET http://localhost:8080/contacts/63ba1a9afdd54bc4ede40d2e
 
 ### 
 GET http://localhost:8080/contacts/63ba1a9afdd54bc4ede40d32
+
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Kira",
+    "lastName":"Tjoe",
+    "email":"Q-ra88@gmail.com",
+    "favoriteColor":"Pink",
+    "birthday":"12/25/1998"
+}
+
+### PUT contact
+PUT http://localhost:8080/contacts/63ba1a9afdd54bc4ede40d2e HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Teddy",
+    "lastName":"Tjoe",
+    "email":"teddytjoe90@gmail.com",
+    "favoriteColor":"Blue",
+    "birthday":"01/20/1990"
+}
+
+### DELETE contact
+DELETE http://localhost:8080/contacts/6489839879661cd56c4d3b8a HTTP/1.1
+
+
+// RENDER Deploy
+### Get all contacts
+GET https://teddy1990.onrender.com/contacts
+
+### Get contact by id
+GET https://teddy1990.onrender.com/contacts/63ba1a9afdd54bc4ede40d2e
+
+### Create contact
+POST https://teddy1990.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Kinan",
+    "lastName":"Tjoe",
+    "email":"KinanNn@gmail.com",
+    "favoriteColor":"Grey",
+    "birthday":"12/25/2020"
+}
+
+### PUT contact
+PUT https://teddy1990.onrender.com/contacts/63ba1a9afdd54bc4ede40d2e HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Teddy",
+    "lastName":"Tjoe",
+    "email":"jethe90@gmail.com",
+    "favoriteColor":"Black",
+    "birthday":"01/20/1990"
+}
+
+### DELETE contact
+DELETE https://teddy1990.onrender.com/contacts/6489839879661cd56c4d3b8a
