@@ -37,11 +37,11 @@ content-type: application/json
     "lastName":"Tjoe",
     "email":"teddytjoe90@gmail.com",
     "favoriteColor":"Blue",
-    "birthday":"01/20/1990"
+    "birthday":"10/30/1990"
 }
 
 ### DELETE contact
-DELETE http://localhost:8080/contacts/6489839879661cd56c4d3b8a HTTP/1.1
+DELETE http://localhost:8080/contacts/6489db4e124c0a2d095ee769 HTTP/1.1
 
 
 
@@ -73,9 +73,9 @@ content-type: application/json
     "firstName":"Teddy",
     "lastName":"Tjoe",
     "email":"jethe90@gmail.com",
-    "favoriteColor":"Black",
-    "birthday":"01/20/1990"
+    "favoriteColor":"Black Mica",
+    "birthday":"01/20/1989"
 }
 
 ### DELETE contact
-DELETE https://teddy1990.onrender.com/contacts/6489839879661cd56c4d3b8a HTTP/1.1
+DELETE https://teddy1990.onrender.com/contacts/6489dc7665eeb9cc549e7589 HTTP/1.1
