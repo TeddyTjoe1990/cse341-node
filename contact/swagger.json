@@ -7,7 +7,9 @@
   },
   "host": "teddy1990.onrender.com",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "https"
+  ],
   "paths": {
     "/api-docs": {
       "get": {
@@ -19,11 +21,16 @@
     "/contacts/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -68,7 +75,9 @@
     "/contacts/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -80,6 +89,9 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
