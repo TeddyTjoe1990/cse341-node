@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
     "lint": "eslint .",
+    "swagger": "node swagger.js",
     "lint:fix": "eslint --fix",
     "format": "prettier --write ./**/*.{js,jsx,ts,tsx,css,md,json} --config ./.prettierrc"
   },
@@ -19,6 +20,7 @@
     "mongoclient": "^1.0.3",
     "mongodb": "^5.6.0",
     "require": "^2.4.20",
+    "swagger-ui-express": "^4.6.3",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
@@ -26,6 +28,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "nodemon": "^2.0.22",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "swagger-autogen": "^2.23.2"
   }
 }

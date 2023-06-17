@@ -79,3 +79,6 @@ content-type: application/json
 
 ### DELETE contact
 DELETE https://teddy1990.onrender.com/contacts/6489dc7665eeb9cc549e7589 HTTP/1.1
+
+### GET api-docs 
+GET https://teddy1990.onrender.com/api-docs
