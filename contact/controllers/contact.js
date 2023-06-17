@@ -51,6 +51,7 @@ const createData = async (req, res) => {
   }
 };
 
+//Update Contact
 const updateData = async (req, res) => {
   try {
     const userId = new ObjectId(req.params.id);
@@ -78,25 +79,19 @@ const updateData = async (req, res) => {
   }
 };
 
-// delete contact by id in the database
+//Delete Contact
 const deleteData = async (req, res) => {
-  try {
-    const userId = new ObjectId(req.params.id);
-    const response = await mongodb
-      .getDb()
-      .db('CSE341')
-      .collection('Contacts')
-      .deleteOne({ _id: userId });
-    if (response.deletedCount === 1) {
-      console.log('Deleted successfully');
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(response).send;
-    } else {
-      res.status(500).json(response.error || 'An error occurred!');
-    }
-  } catch (err) {
-    console.log(err);
-    res.status(500).json({ error: err });
+  const userId = new ObjectId(req.params.id);
+  const response = await mongodb
+    .getDb()
+    .db('CSE341')
+    .collection('Contacts')
+    .deleteOne({ _id: userId }, true);
+  console.log(response);
+  if (response.deletedCount > 0) {
+    res.status(204).send();
+  } else {
+    res.status(500).json(response.error || 'An error occurred while deleting the contact.');
   }
 };
 
