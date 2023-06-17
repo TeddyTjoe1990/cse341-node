@@ -1,6 +1,6 @@
 // const express = require('express');
 const ObjectID = require('mongodb').ObjectId;
-const mongoDB = require('../db/connectdb');
+const mongoDB = require('../db/connect');
 
 const getAll = async (req, res) => {
    try {
