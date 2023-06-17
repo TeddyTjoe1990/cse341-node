@@ -16,10 +16,7 @@ app.use((req, res, next) => {
     'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
   );
   res.setHeader('Content-Type', 'application/json', 'text/html');
-  res.setHeader(
-    'Access-Control-Allow-Methods',
-    'GET, POST, PUT, PATCH, DELETE, OPTIONS'
-  );
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE, OPTIONS');
   next();
 });
 app.use('/', require('./routes'));
