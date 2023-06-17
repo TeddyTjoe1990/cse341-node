@@ -1,6 +1,7 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
+// gets all data from the database
 const getAll = async (req, res) => {
   try {
     const result = await mongodb.getDb().db('CSE341').collection('Contacts').find();
@@ -9,10 +10,12 @@ const getAll = async (req, res) => {
       res.status(200).json(lists);
     });
   } catch (err) {
-    res.status(500).json({ message: err.message });
+    console.log(err);
+    res.status(500).json({ error: err });
   }
 };
 
+// gets single data from the database
 const getSingle = async (req, res) => {
   try {
     const userId = new ObjectId(req.params.id);
@@ -22,10 +25,12 @@ const getSingle = async (req, res) => {
       res.status(200).json(lists[0]);
     });
   } catch (err) {
-    res.status(500).json(err);
+    console.log(err);
+    res.status(500).json({ error: err });
   }
 };
 
+// create new contact in the database
 const createData = async (req, res) => {
   try {
     const contact = {
@@ -35,17 +40,22 @@ const createData = async (req, res) => {
       favoriteColor: req.body.favoriteColor,
       birthday: req.body.birthday
     };
+
     const response = await mongodb.getDb().db('CSE341').collection('Contacts').insertOne(contact);
     if (response.acknowledged) {
+      console.log('Created successfully');
+      res.setHeader('Content-Type', 'application/json');
       res.status(201).json(response);
     } else {
-      res.status(500).json(response.error || 'Some error occurred while creating the contact.');
+      res.status(500).json(response.error || 'An error occurred! Contact not created!');
     }
   } catch (err) {
-    res.status(500).json(err);
+    console.log(err);
+    res.status(500).json({ error: err });
   }
 };
 
+// update contact by id in the database
 const updateData = async (req, res) => {
   try {
     const userId = new ObjectId(req.params.id);
@@ -60,18 +70,22 @@ const updateData = async (req, res) => {
       .getDb()
       .db('CSE341')
       .collection('Contacts')
-      .replaceOne({ _id: userId }, contact);
+      .updateOne({ _id: userId }, { $set: contact });
     console.log(response);
-    if (response.modifiedCount > 0) {
-      res.status(204).send();
+    if (response.modifiedCount === 1) {
+      console.log('Updated successfully');
+      res.setHeader('Content-Type', 'application/json');
+      res.status(204).json(response).send;
     } else {
-      res.status(500).json(response.error || 'Some error occurred while updating the contact.');
+      res.status(500).json(response.error || 'An error occurred!');
     }
   } catch (err) {
-    res.status(500).json(err);
+    console.log(err);
+    res.status(500).json({ error: err });
   }
 };
 
+// delete contact by id in the database
 const deleteData = async (req, res) => {
   try {
     const userId = new ObjectId(req.params.id);
@@ -79,15 +93,17 @@ const deleteData = async (req, res) => {
       .getDb()
       .db('CSE341')
       .collection('Contacts')
-      .remove({ _id: userId }, true);
-    console.log(response);
-    if (response.deletedCount > 0) {
-      res.status(204).send();
+      .deleteOne({ _id: userId });
+    if (response.deletedCount === 1) {
+      console.log('Deleted successfully');
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(response).send;
     } else {
-      res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
+      res.status(500).json(response.error || 'An error occurred!');
     }
   } catch (err) {
-    res.status(500).json(err);
+    console.log(err);
+    res.status(500).json({ error: err });
   }
 };
 
